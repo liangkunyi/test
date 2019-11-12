@@ -1,0 +1,41 @@
+event.preventDefault():  取消事件的默认动作。该方法将通知 Web 浏览器不要执行与事件关联的默认动作（如果存在这样的动作）
+
+
+Vue的自定义组件不能使用click方法-------原因是因为没有加上native,官网对于native的解释为:.native - 监听组件根元素的原生事件（@click.native）这样就能成功在自定义标签上绑定事件了
+
+VUE事件修饰符，异步动态有点懵
+
+
+
+less  
+1.变量
+@color:#dddddd;
+#header{
+color:@color
+}
+就是把颜色赋值给一个并用@表示，然后之后调用时直接@变量就行(而且变量也可以给它加减)
+
+2.混合（可以带参数）
+.name(参数){
+样式
+}
+#id{
+.name(参数);
+}
+3.嵌套
+#外层函数名{
+  .内层函数名
+}
+
+
+引用
+      引入你的 .less 样式文件的时候要设置 rel 属性值为 “stylesheet/less”:
+<link rel="stylesheet/less" type="text/css" href="styles.less">
+
+在<head> 中引入:
+<script src="less.js" type="text/javascript"></script>
+      注意你的less样式文件一定要在引入less.js前先引入。
+
+
+vue
+在webpack.base.conf.js的文件中，修改相关配置：的模块可以省略 ".js"，".vue"，“.json” 后缀，weebpack 会在之后自动添加上；可以用 "@" 符号代替 "src" 字符串等。
